@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/153c373bd9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+
+    <span id = "rotated">
+        <i id = "refresh" class="fa-solid fa-arrows-rotate rotated-1 "></i>
+        </span>
+
+    <h2>
+        Weight Converter
+    </h2>
+    <section class = "container">
+
+        <!-- container -->
+     <div id = "items-container">
+
+        <div class = "user-inputs">
+       <h1>
+        Choose a value in :
+       </h1>
+       <select name="weights" id="input">
+        <option id = "kilo" value="Kilograms">Kilograms</option>
+        <option id = "gram" value="grams">grams</option>
+        <option id = "pounds" value="pounds">Pounds</option>
+        <option id = "ounces" value="ounces">Ounces</option>
+        <option id = "tonne" value="Tonne">Tonne</option>
+      </select>
+      
+      <input id = "user-value" type="text" placeholder="Enter your value">
+
+      <div id = "convert">
+      <h1>
+        Convert to :
+       </h1>
+       <select name="inputs" id="output">
+        <option value="Kilograms">Kilograms</option>
+        <option value="grams">grams</option>
+        <option value="pounds">Pounds</option>
+        <option value="ounces">Ounces</option>
+        <option vvalue="Tonne">Tonne</option>
+      </select>
+</div>
+</div>
+
+<div class = "buttons">
+<button id = "convert-btn">
+    convert
+</button>
+</div> <!--buttons-->
+     <input id = "convert-input" type="text">
+     </div>
+    <!-- user-computation -->
+    
+    </section>
+</body>
+<script src = "weight.js"></script>
+</html>
