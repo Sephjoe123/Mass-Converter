@@ -29,13 +29,11 @@ h1{
     color: rgb(58, 85, 237); 
 }
 ::placeholder{
-    font-size: 0.8rem;
-    
+    font-size: 0.8rem;   
 }
 
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button {  
-
    opacity: 1;
 
 }
@@ -51,6 +49,7 @@ select,#items-container,button,#convert-input,#user-value{
     box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.9),
      -9px -9px 16px rgba(255, 255, 255, 0.5);
      border: 1px solid rgba(214, 214, 214, 0.2); 
+     -webkit-appearance: none;
 }
 #items-container{
     width: 450px;
@@ -60,14 +59,39 @@ select,#items-container,button,#convert-input,#user-value{
     text-align: center;
     position: relative;
 }
-input[type=number]::-webkit-inner-spin-button {
-    opacity: 1
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button {  
 
-   opacity: 1;
+#user-value {
+  border: solid 1px lightgrey;
+  border-radius: 0;
+  text-align: center;
+  background-color: #fff;
+  font-size: 1rem;
+  margin: 40px auto;
+  padding: 10px 40px;
+}
 
+.spinner {
+  border: solid 1px lightgrey;
+}
+
+.spinner:hover {
+  background: lightgrey;
+}
+.increment {
+  border-radius: 0px 0 0 3px;
+  font-size: 0.7rem;
+}
+
+.decrement {
+  border-radius: 30 3px 3px 0;
+  margin-right: 0.7rem;
+  font-size: 0.7rem;
 }
 #input{
     padding: 10px 50px;
@@ -86,15 +110,7 @@ align-items: center;
 justify-content: center;
 margin-top: 50px;
 }
-#user-value{
-    margin-top: 50px;
-    background-color: #fff;
-    font-size: 1rem;
-    text-align: center;
-    padding: 11px 0px;
-    outline: none;
-    
-}
+
 #output{   
      height: 45px;
      width: 150px;
@@ -143,6 +159,7 @@ h2{
     #items-container{
         width: 90%;
         margin: 100px auto;
+        height: 580px;
     }
     #convert-btn{
         left: 40px;
@@ -167,8 +184,9 @@ h2{
     #items-container{
         width: 93%;
         margin: 100px auto;
-        height: 550px;
+        height: 600px;
      }
+     
      #user-value{
         width: 90%;
      }
@@ -189,5 +207,14 @@ h2{
         left: 25px;
         top: 15px;
      }
-  
+    .increment,.decrement{
+       margin: auto;
+    }
+   .number-input{
+    position: relative;
+    margin-top: 2rem;
+   }
+   #user-value{
+    margin: 20px 0;
+   }
 }
