@@ -76,7 +76,7 @@ margin-top: 50px;
     font-size: 1rem;
     text-align: center;
     padding: 11px 0px;
-    outline-color: rgb(58, 85, 237);
+    outline: none;
 }
 #output{   
      height: 45px;
@@ -99,7 +99,7 @@ margin-top: 50px;
 #convert-input{
     position: absolute;
     padding: 12px 1px;
-    outline-color: rgb(58, 85, 237);
+    outline: none;
     margin-top: 2px;
     background-color: #fff;
     text-align: center;
@@ -108,19 +108,35 @@ select{
     outline: none;
 }
 h2{
-    font-size: 2.2rem;
-    margin-top: 2rem;
+    font-size: 1.7rem;
+    margin-top: 1rem;
+    position: relative;
+    top: 2rem;
 }
 
 #refresh{
     position: absolute;
-    left: 70%;
-    top: 15%;
-    font-size: 2.2rem;
+    left: 30px;
+    top: 30px;
+    font-size: 1.5rem;
     color: rgb(40, 64, 205);
    }
- .rotated-1{
-    transform: rotate(0deg);
-    transition: all ease-in-out .3s; 
-}
 
+@media screen and (max-width: 460px) {
+    #items-container{
+        width: 90%;
+        margin: 100px auto;
+    }
+    #convert-btn{
+        left: 40px;
+    }
+    #convert-input{
+        max-width: 40%;
+    }
+    @media screen and (max-width: 370px){
+        #items-container{
+        width: 95%;
+        margin: 100px auto;
+     }
+    }
+}
