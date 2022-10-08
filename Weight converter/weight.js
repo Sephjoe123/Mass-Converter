@@ -5,6 +5,17 @@ var convertInput = document.getElementById("convert-input");
 var output = document.getElementById("output");
 var convertBtn = document.getElementById("convert-btn");
 var refresh = document.getElementById("refresh");
+const input = document.querySelector('input[type=number]')
+
+const increment = () => {
+  input.value = Number(input.value) + 1
+}
+const decrement = () => {
+  input.value = Number(input.value) - 1
+}
+
+document.querySelector('.spinner.increment').addEventListener('click', increment)
+document.querySelector('.spinner.decrement').addEventListener('click', decrement)
 
 convertBtn.addEventListener("click",calculate);
 convertBtn.addEventListener("click",alertMe);
