@@ -11,9 +11,7 @@
 </head>
 <body>
 
-    <span id = "rotated">
-        <i id = "refresh" class="fa-solid fa-arrows-rotate rotated-1 "></i>
-        </span>
+    
 
     <h2>
         Weight Converter
@@ -22,7 +20,9 @@
 
         <!-- container -->
      <div id = "items-container">
-
+        <span id = "rotated">
+            <i id = "refresh" class="fa-solid fa-arrows-rotate rotated-1 "></i>
+            </span>
         <div class = "user-inputs">
        <h1>
         Choose a value in :
@@ -35,8 +35,8 @@
         <option id = "tonne" value="Tonne">Tonne</option>
       </select>
       
-      <input id = "user-value" type="text" placeholder="Enter your value">
-
+      <input type="number"  value="" id = "user-value" placeholder="Enter a value" />
+     
       <div id = "convert">
       <h1>
         Convert to :
@@ -56,7 +56,7 @@
     convert
 </button>
 </div> <!--buttons-->
-     <input id = "convert-input" type="text">
+     <input  id = "convert-input" type="text">
      </div>
     <!-- user-computation -->
     
