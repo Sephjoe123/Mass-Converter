@@ -1,25 +1,16 @@
 // Global variables declaration
-var userValue = document.getElementById("user-value");
+var userValue = document.getElementById("user-value")
 var selectInput = document.getElementById("input");
 var convertInput = document.getElementById("convert-input");
 var output = document.getElementById("output");
 var convertBtn = document.getElementById("convert-btn");
 var refresh = document.getElementById("refresh");
-const input = document.querySelector('input[type=number]')
-
-const increment = () => {
-  input.value = Number(input.value) + 1
-}
-const decrement = () => {
-  input.value = Number(input.value) - 1
-}
-
-document.querySelector('.spinner.increment').addEventListener('click', increment)
-document.querySelector('.spinner.decrement').addEventListener('click', decrement)
 
 convertBtn.addEventListener("click",calculate);
+userValue.addEventListener("input",calculate)
 convertBtn.addEventListener("click",alertMe);
- 
+selectInput.addEventListener("input",calculate)
+
 function alertMe(){
    if(userValue.value === ""){
       alert("please enter a value on the input field !");
@@ -29,11 +20,9 @@ function alertMe(){
       convertInput.style.background = "#64b450"
    }
 }
-
 function calculate(){
-    
-   //  check if the value selected to be converted is equal to each other return the input provided
 
+   //  check if the value selected to be converted is equal to each other return the input provided
   if(selectInput.value === "Kilograms" && output.value === "Kilograms" ||
   selectInput.value === "grams" && output.value === "grams" ||
   selectInput.value === "pounds" && output.value === "pounds" ||  
@@ -66,20 +55,19 @@ else if(selectInput.value === "Kilograms" && output.value === "Tonne"){
 
 // grams
 else if(selectInput.value === "grams" && output.value === "Kilograms"){
-   convertInput.value = userValue.value / 1000 + "Kg"
+   convertInput.value = (userValue.value / 1000).toFixed(4) + "Kg"
 }
 
 else if(selectInput.value === "grams" && output.value === "pounds"){
    convertInput.value = (userValue.value / 453.6).toFixed(4) + "lbs";
    
- 
 }
 
 else if(selectInput.value === "grams" && output.value === "ounces"){
    convertInput.value = (userValue.value / 28.35).toFixed(4) + "Oz";
 }
 else if(selectInput.value === "grams" && output.value === "Tonne"){
-   convertInput.value = userValue.value / 1000000 + "Mg";
+   convertInput.value = (userValue.value / 1000000).toFixed(4) + "Mg";
 }
 
 // ounces
@@ -149,7 +137,6 @@ else if(selectInput.value === "Tonne" && output.value === "grams"){
 
 convertInput.addEventListener("keyup",clearText);
 userValue.addEventListener("keydown",clearText);
-
 
 function clearText(){
    if(convertInput.value == "" && userValue.value !== ""){
