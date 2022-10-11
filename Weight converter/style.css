@@ -50,6 +50,7 @@ select,#items-container,button,#convert-input,#user-value{
     box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.9),
      -9px -9px 16px rgba(255, 255, 255, 0.5);
      border: 1px solid rgba(214, 214, 214, 0.2); 
+     -webkit-appearance: none;
 }
 #items-container,button,#convert-input,#user-value{
     -webkit-appearance: none;
