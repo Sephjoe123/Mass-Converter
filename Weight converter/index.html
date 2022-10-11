@@ -12,7 +12,6 @@
 <body>
 
     
-
     <h2>
         Weight Converter
     </h2>
@@ -20,11 +19,11 @@
 
         <!-- container -->
      <div id = "items-container">
-        <span id = "rotated">
+        <div class = "container-body">  <span id = "rotated">
             <i id = "refresh" class="fa-solid fa-arrows-rotate rotated-1 "></i>
             </span>
         <div class = "user-inputs">
-       <h1>
+       <h1 class = "choose">
         Choose a value in :
        </h1>
        <select name="weights" id="input">
@@ -34,17 +33,13 @@
         <option id = "ounces" value="ounces">Ounces</option>
         <option id = "tonne" value="Tonne">Tonne</option>
       </select>
-      
- <div class="number-input">
-    <button class="spinner increment">&#9650;</button>
-      <input type ="number" id = "user-value" name="Quantity[47]" value="0" class="qtyInputLoose" min="0" max="8" />
-      <button class="spinner decrement">&#9660;</button>
-      <div class="spinners">
+       <br>
+       <br>
+       <br>
+        <input type="number" id ="user-value" name="username" maxlength="10"><br><br>
         
-      </div>
-      </div>
       <div id = "convert">
-      <h1>
+      <h1 class = "choose-2">
         Convert to :
        </h1>
        <select name="inputs" id="output">
@@ -55,14 +50,15 @@
         <option vvalue="Tonne">Tonne</option>
       </select>
 </div>
-</div>
+
 
 <div class = "buttons">
 <button id = "convert-btn">
     convert
 </button>
-</div> <!--buttons-->
+ <!--buttons-->
      <input  id = "convert-input" type="text">
+    </div>
      </div>
     <!-- user-computation -->
     
@@ -70,3 +66,7 @@
 </body>
 <script src = "weight.js"></script>
 </html>
+
+
+
+
