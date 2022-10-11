@@ -25,7 +25,7 @@ text-align: center;
     
 }
 h1{
-    font-size: 1.4rem;
+    font-size: 1.15rem;
     color: rgb(58, 85, 237); 
 }
 ::placeholder{
@@ -44,12 +44,15 @@ input[type=number]::-webkit-outer-spin-button {
  margin: 100px auto;
  text-align: center;
 }
+
 select,#items-container,button,#convert-input,#user-value{
     background-color: #e0e5ec;;
     box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.9),
      -9px -9px 16px rgba(255, 255, 255, 0.5);
      border: 1px solid rgba(214, 214, 214, 0.2); 
-     -webkit-appearance: none;
+}
+#items-container,button,#convert-input,#user-value{
+    -webkit-appearance: none;
 }
 #items-container{
     width: 450px;
@@ -60,43 +63,26 @@ select,#items-container,button,#convert-input,#user-value{
     position: relative;
 }
 
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
 #user-value {
   border: solid 1px lightgrey;
   border-radius: 0;
   text-align: center;
   background-color: #fff;
   font-size: 1rem;
-  margin: 40px auto;
-  padding: 10px 40px;
+  width: 60%;
+  padding: 15px;
+  outline: none;
+}
+select{
+    font-size: 0.85rem;
 }
 
-.spinner {
-  border: solid 1px lightgrey;
-}
-
-.spinner:hover {
-  background: lightgrey;
-}
-.increment {
-  border-radius: 0px 0 0 3px;
-  font-size: 0.7rem;
-}
-
-.decrement {
-  border-radius: 30 3px 3px 0;
-  margin-right: 0.7rem;
-  font-size: 0.7rem;
-}
 #input{
-    padding: 10px 50px;
+    width: 40%;
+    padding: 15px 20px;
     border-radius: 20px;
     margin-top: 25px;
+    text-align: center;
 }
 #line{
     width: 90%;
@@ -112,16 +98,16 @@ margin-top: 50px;
 }
 
 #output{   
-     height: 45px;
-     width: 150px;
+     padding: 15px 15px;
      text-align: center;
      border-radius: 20px;
 }
 #convert-btn{
-    padding: 15px 30px;
-    position: absolute;
-    left: 70px;
+    width: 40%;
+    margin-top: 5px;
     border-radius: 20px;
+    padding: 15px 20px;
+    text-align: center;
 }
 #convert-btn:hover{
     background-color: rgb(58, 85, 237);
@@ -129,9 +115,20 @@ margin-top: 50px;
     color: white;
     transform: scale(1.05);
 }
-#convert-input{
-    position: absolute;
-    padding: 12px 1px;
+.buttons{
+    display: flex;
+     gap: 3rem;
+     margin-top: 50px;
+     justify-content: center;
+     align-items: center;
+}
+#convert{
+    display: flex;
+    gap: 5rem;
+}
+#convert-input{ 
+    max-width: 40%;
+    padding: 15px 20px;
     outline: none;
     margin-top: 2px;
     background-color: #fff;
@@ -154,67 +151,37 @@ h2{
     font-size: 1.5rem;
     color: rgb(40, 64, 205);
    }
-
-@media screen and   (max-width: 460px) {
+.choose-2{
+    font-size: 1.15rem;
+}
+@media screen and (max-width: 480px) {
     #items-container{
-        width: 90%;
-        margin: 100px auto;
-        height: 580px;
-    }
-    #convert-btn{
-        left: 40px;
-    }
-    #convert-input{
-        max-width: 40%;
-    }
-   
-    @media screen and  (max-width: 370px){
-        #items-container{
         width: 95%;
-        margin: 100px auto;
-     }
-     #convert-btn{
-        left: 30px;
-        width: 35%;
-        text-align: center;
-    }
     }
 }
-@media screen and (min-width: 220px) and (max-width: 320px){
-    #items-container{
-        width: 93%;
-        margin: 100px auto;
-        height: 600px;
-     }
-     
-     #user-value{
-        width: 90%;
-     }
-     #input{
-        padding: 10px 30px;
-     }
-     #convert-btn{
-        padding: 15px;
-        left: 20px;
-     }
-     #output{
-        padding: 0px 12px;
-     }
-     #convert h1, .user-inputs h1{
-        font-size: 1.1rem;
-     }
-     #refresh{
-        left: 25px;
-        top: 15px;
-     }
-    .increment,.decrement{
-       margin: auto;
-    }
-   .number-input{
-    position: relative;
-    margin-top: 2rem;
-   }
-   #user-value{
-    margin: 20px 0;
-   }
+@media screen and (max-width: 380px){
+  #user-value,#input,#convert-btn{
+    width: 90%;
+    padding: 10px 20px;
+   
+  }
+  #convert-input{
+  padding: 10px 45px;
+  }
+  .buttons{
+    gap: 2rem
+  }
+  #items-container{
+    margin: auto;
+    display: block;
+}
+#output{
+    padding: 15px 10px;
+}
+#convert{
+    gap: 3rem;
+}
+h1,.choose-2{
+    font-size: 0.8rem;
+}
 }
