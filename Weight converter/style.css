@@ -163,10 +163,10 @@ h2{
   #user-value,#input,#convert-btn{
     width: 90%;
     padding: 10px 20px;
-   
+    text-align: center;
   }
   #convert-input{
-  padding: 10px 45px;
+    max-width: 60%;
   }
   .buttons{
     gap: 2rem
@@ -184,4 +184,5 @@ h2{
 h1,.choose-2{
     font-size: 0.8rem;
 }
+
 }
