@@ -6,52 +6,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/153c373bd9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 </head>
 <body>
-    <section class = "container">
-      <div id="items-container">
-        
-        <div class="container-inputs">
-            <h1>
-                Password Generator
-            </h1>
-    
-            <input type="text" id = "password">
 
-            <div class="list-items">
-            <ul>
-               <li>
-                Password length
-                <input type="text" id = "length">
-               </li>
-               <li>
-                 Inlude uppercase letters
-                 <input type="checkbox" id = "uppercase">
-               </li>
-               
-            <li>
-             Include lowercase letters
-             <input type="checkbox"  id = "lowercase">
-            </li>
-            
-            <li>
-           Include numbers
-           <input type="checkbox" id = "numbers">
-            </li>
-            
-            <li>
-                Include symbols
-                <input type="checkbox" id = "symbols">
-            </li>
-            </ul>
-  <button id = "generate">
-   Generate Password
-  </button>
-            </div>
-        </div>
+    
+    <h2>
+        Weight Converter
+    </h2>
+    <section class = "container">
+
+        <!-- container -->
+     <div id = "items-container">
+        <div class = "container-body">  <span id = "rotated">
+            <i id = "refresh" class="fa-solid fa-arrows-rotate rotated-1 "></i>
+            </span>
+        <div class = "user-inputs">
+       <h1 class = "choose">
+        Choose a value in :
+       </h1>
+       <select name="weights" id="input">
+        <option id = "kilo" value="Kilograms">Kilograms</option>
+        <option id = "gram" value="grams">grams</option>
+        <option id = "pounds" value="pounds">Pounds</option>
+        <option id = "ounces" value="ounces">Ounces</option>
+        <option id = "tonne" value="Tonne">Tonne</option>
+      </select>
+       <br>
+       <br>
+       <br>
+        <input type="number" id ="user-value" name="username" maxlength="10"><br><br>
         
-      </div>
+      <div id = "convert">
+      <h1 class = "choose-2">
+       <span> Convert </span>  
+       </h1>
+       <select name="inputs" id="output">
+        <option value="Kilograms">Kilograms</option>
+        <option value="grams">grams</option>
+        <option value="pounds">Pounds</option>
+        <option value="ounces">Ounces</option>
+        <option vvalue="Tonne">Tonne</option>
+      </select>
+</div>
+
+
+<div class = "buttons">
+<button id = "convert-btn">
+    convert
+</button>
+ <!--buttons-->
+     <input  id = "convert-input" type="text">
+    </div>
+     </div>
+    <!-- user-computation -->
+    
     </section>
-    <script src = "script.js"></script>
 </body>
+<script src = "weight.js"></script>
 </html>
+
+
+
+
